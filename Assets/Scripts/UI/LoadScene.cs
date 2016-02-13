@@ -9,7 +9,7 @@ public class LoadScene : MonoBehaviour {
     /// </summary>
     public void LoadNextLevel() {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex++);
+        SceneManager.LoadScene(currentSceneIndex+1);
     }
     
     /// <summary>
