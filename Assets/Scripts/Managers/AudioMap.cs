@@ -1,31 +1,42 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+/// <summary>
+/// Stores all of the Audioclips recorded by the user.
+/// </summary>
 public class AudioMap : MonoBehaviour {
 
-    private Dictionary<int, AudioSource> audioMap;
+    /// <summary>
+    /// Maps all audioclips to a hash ID, such that multiple buttons can access the same audio file.
+    /// </summary>
+    private Dictionary<int, AudioClip> audioMap;
 
     private void Awake() {
-        audioMap = new Dictionary<int, AudioSource>();
+        audioMap = new Dictionary<int, AudioClip>();
     }
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
     
-    public void AddToDictionary(int hashID, AudioSource source) {
+    /// <summary>
+    /// Adds an Audio clip and button ID to the dictionary.
+    /// </summary>
+    /// <param name="hashID"></param>
+    /// <param name="clip"></param>
+    public void AddToDictionary(int hashID, AudioClip clip) {
         try {
-            audioMap.Add(hashID, source);
+            audioMap.Add(hashID, clip);
         }
         catch {
-            Debug.LogWarning(hashID + " already exists");
+            Debug.LogWarning(hashID + " already exists, updating the current Value instead");
+            audioMap[hashID] = clip;
         }
+    }
+
+    /// <summary>
+    /// Returns an instance of the audioclip that's recorded.
+    /// </summary>
+    /// <param name="hashID"></param>
+    /// <returns></returns>
+    public AudioClip GetAudioClip(int hashID) {
+        return audioMap[hashID];
     }
         
 }

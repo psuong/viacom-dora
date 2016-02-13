@@ -4,9 +4,15 @@ using System.Collections;
 [RequireComponent(typeof(AudioSource))]
 public class RecordAudio : MonoBehaviour {
 
+    public ButtonHashID currentHashID;
+
+    /// <summary>
+    /// Should the audioclip be on "loopable?"
+    /// </summary>
+    public bool isLoopingClip;
+
     private AudioMap map;
     private AudioSource audio;
-    public ButtonHashID currentHashID;
 
     // Use this for initialization
     private void Start() {
@@ -18,15 +24,12 @@ public class RecordAudio : MonoBehaviour {
         map = FindObjectOfType<AudioMap>();
     }
 
-    private void AddToAudioMap() {
-        map.AddToDictionary(currentHashID.getHashID, audio);
-    }
-
     public void StartRecordingAudio() {
-        audio.clip = Microphone.Start("", true, 10, 44100);
+        audio.clip = Microphone.Start("", isLoopingClip, 5, 44100);
+        Invoke("AddAudioClip", 5f);
     }
 
-    public void PlayRecordedAudio() {
-        audio.Play();
+    private void AddAudioClip() {
+        map.AddToDictionary(currentHashID.getHashID, audio.clip);
     }
 }
