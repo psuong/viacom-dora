@@ -1,20 +1,30 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class LoadSpecificScreen : LoadScene {
 
     private FindList listManager;
-    private GameObject[] sprites;
+    private GameObject[] findSprites;
+    private GameObject[] clickableSprites;
+    private Image[] untaggedSprites;
 
     private void Start() {
         listManager = FindObjectOfType<FindList>();
-        sprites = GameObject.FindGameObjectsWithTag("find");
+        findSprites = GameObject.FindGameObjectsWithTag("find");
+        clickableSprites = GameObject.FindGameObjectsWithTag("clickable");
+        untaggedSprites = FindObjectsOfType<Image>();
     }
 
     public override void LoadNextLevel() {
         DontDestroyOnLoad(listManager.gameObject);
-        for (int i = 0; i < sprites.Length; i++) {
-            DontDestroyOnLoad(sprites[i].transform.root);
+        for (int i = 0; i < findSprites.Length; i++) {
+            findSprites[i].SetActive(false);
+            DontDestroyOnLoad(findSprites[i].transform.root);
+        }
+        for (int i = 0; i < clickableSprites.Length; i++) {
+            clickableSprites[i].SetActive(false);
+            DontDestroyOnLoad(findSprites[i].transform.root);
         }
         base.LoadNextLevel();
     }
