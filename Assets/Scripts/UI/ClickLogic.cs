@@ -3,12 +3,13 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class ClickLogic : MonoBehaviour {
+
 	private bool foundAll = false;
 	private FindList count;
 
 	// Use this for initialization
 	void Start(){
-		count = FindObjectOfType<FindList> ();
+		count = FindObjectOfType<FindList>();
 	}
 
 	public void findCheck(){
@@ -20,7 +21,7 @@ public class ClickLogic : MonoBehaviour {
 		}
 		if (count.foundCount == 5){
 			foundAll = true;
-			Debug.Log ("DONE");
+            count.continueButton.SetActive(true);
         }
 	}
 }

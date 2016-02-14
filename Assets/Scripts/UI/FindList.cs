@@ -6,13 +6,13 @@ using UIFramework.Singleton;
 public class FindList : Singleton<FindList> {
 	List<GameObject> sprites = new List<GameObject> ();
 	public int foundCount = 0;
+    public GameObject continueButton;
 
 	protected override void OnAwake(){
 		sprites = new List<GameObject> ();
 	}
 	// Use this for initialization
 	void Start () {
-
 		sprites.AddRange(GameObject.FindGameObjectsWithTag("clickable"));
 		int listCount = 0;
 		while (listCount < 5){
@@ -22,9 +22,6 @@ public class FindList : Singleton<FindList> {
 				listCount += 1;
 				print (sprites [find]);
 			}
-
 		}
-
 	}
-
 }
