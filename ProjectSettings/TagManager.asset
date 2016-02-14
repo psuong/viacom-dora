@@ -6,6 +6,7 @@ TagManager:
   tags:
   - clickable
   - find
+  - Grid
   layers:
   - Default
   - TransparentFX

@@ -1,14 +1,17 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using UIFramework.Singleton;
 
 public class FindList : Singleton<FindList> {
-	List<GameObject> sprites = new List<GameObject> ();
+    
 	public int foundCount = 0;
     public GameObject continueButton;
 
-	protected override void OnAwake(){
+    public List<GameObject> accessSprites { get { return sprites; } }
+
+    private List<GameObject> sprites;
+
+    protected override void OnAwake(){
 		sprites = new List<GameObject> ();
 	}
 	// Use this for initialization
@@ -24,4 +27,13 @@ public class FindList : Singleton<FindList> {
 			}
 		}
 	}
+
+    public void ActivateButton() {
+        continueButton.SetActive(true);
+        for (int i = 0; i < sprites.Count; i++) {
+            DontDestroyOnLoad(sprites[i]);
+            DontDestroyOnLoad(sprites[i].transform.root);
+        }
+        DontDestroyOnLoad(this);
+    }
 }

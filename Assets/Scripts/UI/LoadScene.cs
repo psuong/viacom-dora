@@ -7,7 +7,7 @@ public class LoadScene : MonoBehaviour {
     /// <summary>
     /// Get the current active scene and and increment it to load the next scene.
     /// </summary>
-    public void LoadNextLevel() {
+    public virtual void LoadNextLevel() {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex+1);
     }
@@ -15,7 +15,7 @@ public class LoadScene : MonoBehaviour {
     /// <summary>
     /// Allows buttons to be assigned to load a specific level.
     /// </summary>
-    public void LoadCustomScene(int sceneIndex) {
+    public virtual void LoadCustomScene(int sceneIndex) {
         SceneManager.LoadScene(sceneIndex);
     }
 }
