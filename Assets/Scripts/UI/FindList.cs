@@ -1,9 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UIFramework.Singleton;
 
-
-public class FindList : MonoBehaviour {
+public class FindList : Singleton<FindList>() {
 	List<GameObject> sprites = new List<GameObject> ();
 	public int foundCount = 0;
 

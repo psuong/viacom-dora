@@ -24,11 +24,6 @@ public class PlayAudio : MonoBehaviour {
     private void SetHashID() {
         hashID = recordingButton.currentHashID.getHashID;
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     /// <summary>
     /// Plays the recorded audio clip.
