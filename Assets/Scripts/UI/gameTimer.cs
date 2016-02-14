@@ -8,7 +8,7 @@ public class gameTimer : UIScreen
 	bool pressed = false;
 	bool timerIsNotRunning = false;
 	int seconds = 0;
-	string secondsString;
+	public string secondsString;
 
     protected override void Start() {
         base.Start();

@@ -16,9 +16,6 @@ public class RecordAudio : MonoBehaviour {
 
     // Use this for initialization
     private void Start() {
-        foreach (string device in Microphone.devices) {
-            Debug.Log("Name: " + device);
-        }
         audio = GetComponent<AudioSource>();
         currentHashID = new ButtonHashID(Animator.StringToHash(gameObject.name));
         map = FindObjectOfType<AudioMap>();

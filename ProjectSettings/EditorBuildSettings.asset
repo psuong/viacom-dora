@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Finding Screen.unity
   - enabled: 1
     path: Assets/Scenes/Audio Test.unity
+  - enabled: 1
+    path: Assets/Scenes/End Screen.unity

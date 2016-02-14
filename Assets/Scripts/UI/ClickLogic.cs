@@ -16,7 +16,11 @@ public class ClickLogic : MonoBehaviour {
 		if (gameObject.tag == "find"){
 			count.foundCount += 1;
 			gameObject.GetComponent<Button> ().interactable = false;
-
+            Text text = GetTextItem();
+            Debug.Log(text.name);
+            if (text != null) {
+                text.color = Color.red;
+            }
 		}
 		if (count.foundCount == 5){
 			foundAll = true;
@@ -24,4 +28,13 @@ public class ClickLogic : MonoBehaviour {
         }
         StopAllCoroutines();
 	}
+
+    private Text GetTextItem() {
+        for (int i = 0; i < count.accessTextItems.Length; i++) {
+            if (gameObject.name == count.accessTextItems[i].text) {
+                return count.accessTextItems[i];
+            }
+        }
+        return null;
+    }
 }
