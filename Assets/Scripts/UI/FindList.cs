@@ -30,10 +30,5 @@ public class FindList : Singleton<FindList> {
 
     public void ActivateButton() {
         continueButton.SetActive(true);
-        for (int i = 0; i < sprites.Count; i++) {
-            DontDestroyOnLoad(sprites[i]);
-            DontDestroyOnLoad(sprites[i].transform.root);
-        }
-        DontDestroyOnLoad(this);
     }
 }

@@ -17,11 +17,6 @@ public class GridGenerator : MonoBehaviour {
         GeneratePanels();
         DisableInactiveGrids();
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     private void GeneratePanels() {
         for (int i = 0; i < listManager.accessSprites.Count; i++) {

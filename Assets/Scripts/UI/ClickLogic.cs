@@ -22,5 +22,6 @@ public class ClickLogic : MonoBehaviour {
 			foundAll = true;
             count.continueButton.SetActive(true);
         }
+        StopAllCoroutines();
 	}
 }
