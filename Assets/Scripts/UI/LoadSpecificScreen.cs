@@ -5,6 +5,7 @@ using System.Collections;
 public class LoadSpecificScreen : LoadScene {
     
     public gameTimer timerScreen;
+    public GameObject listOfItems;
 
     private FindList listManager;
     private GameObject[] findSprites;
@@ -36,6 +37,7 @@ public class LoadSpecificScreen : LoadScene {
         FindObjectOfType<Button>().gameObject.SetActive(false);
         timerScreen.StopTimer();
         timerScreen.gameObject.SetActive(false);
+        listOfItems.SetActive(false);
         StopAllCoroutines();
         base.LoadNextLevel();
     }
