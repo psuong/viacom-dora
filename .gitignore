@@ -30,3 +30,6 @@ sysinfo.txt
 
 # Vim swap files
 *.swp
+
+# Orig Files
+*.orig*
