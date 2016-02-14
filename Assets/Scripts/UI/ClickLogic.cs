@@ -16,6 +16,7 @@ public class ClickLogic : MonoBehaviour {
 		if (gameObject.tag == "find"){
 			count.foundCount += 1;
 			gameObject.GetComponent<Button> ().interactable = false;
+
 		}
 		if (count.foundCount == 5){
 			foundAll = true;

@@ -10,6 +10,7 @@ public class FindList : Singleton<FindList> {
     public GameObject itemTextGroup;
 
     public List<GameObject> accessSprites { get { return sprites; } }
+    public Text[] accessTextItems { get { return textItems; } } 
 
     private List<GameObject> sprites;
     private Text[] textItems;
