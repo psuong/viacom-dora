@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UIFramework.Singleton;
 
-public class FindList : Singleton<FindList>() {
+public class FindList : Singleton<FindList> {
 	List<GameObject> sprites = new List<GameObject> ();
 	public int foundCount = 0;
 
-	void Awake(){
+	protected override void OnAwake(){
 		sprites = new List<GameObject> ();
 	}
 	// Use this for initialization
