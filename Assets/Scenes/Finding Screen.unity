@@ -554,6 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: 
   timerText: Time
+  secondsString: 
 --- !u!1 &772732856
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,6 +939,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1335312834}
   - 114: {fileID: 1335312835}
+  - 114: {fileID: 1335312836}
   m_Layer: 0
   m_Name: Object Manager
   m_TagString: Untagged
@@ -971,6 +973,18 @@ MonoBehaviour:
   foundCount: 0
   continueButton: {fileID: 281699709}
   itemTextGroup: {fileID: 936719965}
+--- !u!114 &1335312836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1335312833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3185465f9b34657a522c96e6d15ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsTaken: 
 --- !u!1 &1337331645
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,16 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UIFramework.Singleton;
+using UIFramework;
 
 public class HighScore : UIScreen {
-	private gameTimer score;
+	private timeKeeper score;
 	public string scorebox;
 	string endtime;
 
 	// Use this for initialization
-	void Start () {
-		score = FindObjectOfType<gameTimer> ();
-		endtime = score.secondsString;
+	private void OnEnable () {
+		score = FindObjectOfType<timeKeeper> ();
+		Debug.Log (score);
+		endtime = score.secondsTaken;
+		Debug.Log (endtime);
 		SetText (scorebox, "You took " + endtime + " seconds to find the items!");
 	}
 	
