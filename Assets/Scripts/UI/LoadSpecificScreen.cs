@@ -26,6 +26,12 @@ public class LoadSpecificScreen : LoadScene {
             clickableSprites[i].SetActive(false);
             DontDestroyOnLoad(findSprites[i].transform.root);
         }
+        for (int i = 0; i < untaggedSprites.Length; i++) {
+            if (untaggedSprites[i].tag != "clickable" || untaggedSprites[i].tag != "find") {
+                untaggedSprites[i].gameObject.SetActive(false);
+            }
+        }
+        FindObjectOfType<Button>().gameObject.SetActive(false);
         base.LoadNextLevel();
     }
 }
