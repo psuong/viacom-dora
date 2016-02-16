@@ -1,6 +1,6 @@
 ## What is Viacom-Dora?
 
-Viacom-Dora is a HackBU project built by two members from City College for the Viacom Hackathon Challenge. The challenge was to create the best media related hack, and so we re-engineered a little "find the hiiden-objects" game using Unity, Monobehaviour, and some .NET.
+Viacom-Dora is a HackBU project built by two members from City College for the Viacom Hackathon Challenge. The challenge was to create the best media related hack, and so we re-engineered a little "find the hidden-objects" game using Unity, Monobehaviour, and some .NET.
 
 The objective of the game is to find the hidden objects as fast as you can in the picture. When all the items are found, the player is brought to a reinforcements learning page.
 
