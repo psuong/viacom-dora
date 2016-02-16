@@ -17,7 +17,6 @@ public class ClickLogic : MonoBehaviour {
 			count.foundCount += 1;
 			gameObject.GetComponent<Button> ().interactable = false;
             Text text = GetTextItem();
-            Debug.Log(text.name);
             if (text != null) {
                 text.color = Color.red;
             }
