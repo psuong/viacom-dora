@@ -13,6 +13,6 @@ Essentially, the reinforcements learning page allows the user to record their ow
 While the project will most likely remain at it's current state, a functional and flexible Microphone plugin will be developed for Unity in order to support game developers/designers create these kinds of reinforcement/interactive games.
 
 ## Contributors:
-[Porrith Suong](https://github.com/psuong)
-[Claudia Yan](https://github.com/s1cyan)
+- [Porrith Suong](https://github.com/psuong)
+- [Claudia Yan](https://github.com/s1cyan)
 
